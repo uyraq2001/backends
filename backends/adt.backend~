@@ -1,0 +1,8 @@
+[Manager]
+module_name = executor
+node_name = adtapp
+interface_name = application
+
+[info]
+execute = cat /usr/share/alterator/applications/adt.desktop
+stdout_bytes = enabled
