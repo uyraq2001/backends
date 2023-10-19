@@ -1,19 +1,19 @@
 %define _unpackaged_files_terminate_build 1
 
-Name: backends
+Name: alterator-browser-backends
 Version: 0.1.0
-Release: alt1
+Release: alt2
 
-Summary: Backend files for Alterator Browser
+Summary: Backend files for ACC
 License: GPLv2+
 Group: Other
 URL: https:/github.com/uyraq2001/backends
-
+BuildArch: noarch
 
 Source0: %name-%version.tar
 
 %description
-Backend files for Alterator Browser
+Backend files for alterator control center modules, using by Alterator Browser
 
 %prep
 %setup
@@ -29,7 +29,9 @@ install -v -p -m 644 -D  scripts/*.sh %buildroot%_datadir/alterator/scripts
 %_datadir/alterator/backends/*.backend
 %_datadir/alterator/scripts/*.sh
 
-
 %changelog
+* Thu Oct 19 2023 Aleksey Saprunov <sav@altlinux.org> 0.1.0-alt2
+- change spec file
+
 * Wed Oct 18 2023 Kozyrev Yuri <kozyrevid@altlinux.org> 0.1.0-alt1
 - initial build
